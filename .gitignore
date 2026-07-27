@@ -1,0 +1,10 @@
+# MLflow local tracking + artifacts
+mlruns/
+mlartifacts/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/

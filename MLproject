@@ -1,0 +1,16 @@
+name: student-clearance-mlflow
+
+python_env: python_env.yaml
+
+entry_points:
+  train:
+    parameters:
+      model_type: {type: string, default: "logreg"}
+      data_path: {type: string, default: "data/global_student_academic_status.csv"}
+    command: "python src/train.py --model-type {model_type} --data-path {data_path}"
+
+  promote:
+    parameters:
+      model_type: {type: string, default: "rf"}
+      data_path: {type: string, default: "data/global_student_academic_status.csv"}
+    command: "python src/promote.py --model-type {model_type} --data-path {data_path}"
